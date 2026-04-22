@@ -1,12 +1,23 @@
 # 🛰️ NetPulse-Audit : *Scanner de Reconnaissance Réseau & Services*
 
-## 1. Présentation du Projet
+## -------------- Partie 1. Présentation du Projet -------------- 
 **NetPulse-Audit** est un outil d'exploration **réseau** développé en **Python**. Il a pour **objectif** de **cartographier** un segment **réseau** (LAN) et d'analyser l'**exposition** des **services** sur chaque **hôte** découvert. Contrairement aux outils de scan basiques, il utilise des techniques de bas niveau pour maximiser la visibilité tout en restant discret.
 
-## 2. Avertissement Légal ⚠️ 
+
+
+
+---
+---
+
+## -------------- Partie 2. Avertissement Légal ⚠️ -------------- 
 Cet outil est conçu pour un usage strictement **pédagogique** et **professionnel** dans le cadre **d'audits de sécurité autorisés**. L'auteur décline toute responsabilité en cas d'usage malveillant. Nous rappelons qu'il **strictement interdit** de scanner un réseau sans y avoir été autorisé par le propriétaire.
 
-## 3. Démarche d'audit *(Pédagogie & Technique)* 🛡️ 
+
+---
+---
+
+
+## ---------- Partie 3. Démarche d'audit *(Pédagogie & Technique)* 🛡️ ---------- 
 L'audit suit une méthodologie rigoureuse divisée en trois phases distinctes :
 
 ### ● Phase 1 : Découverte d'Hôtes *(Layer 2 - ARP)*
@@ -26,13 +37,17 @@ L'audit suit une méthodologie rigoureuse divisée en trois phases distinctes :
 
 * **Banner Grabbing :** Pour les ports **ouverts**, une requête polie est envoyée au service (ex: requête HEAD pour le HTTP) afin de provoquer une réponse. Cela permet d'identifier le **logiciel** serveur (Nginx, Apache, SSH) et sa **version** si elle n'a pas été desactivé lors de configuration.
 
-## 4. Fonctionnalités Clés
+---
+---
+## -------------- Partie 4. Fonctionnalités Clés -------------- 
 * **Résolution DNS :** Identification des noms d'hôtes pour une meilleure lisibilité.
 * **Audit de Version :** Aide à l'identification de CVE (vulnérabilités) via la récupération des bannières.
 * **Rapports Automatisés :** Génération de logs au format **JSON** structuré pour l'historisation.
 * **Sécurité des données :** Gestion automatique des permissions Linux (chown/chmod) pour protéger les rapports générés par l'utilisateur root.
 
-## 5. Installation & Utilisation 
+---
+---
+## -------------- Partie 5. Installation & Utilisation --------------  
 
 1. **Dépendances :**
 ```bash
@@ -64,7 +79,9 @@ Le Fichier **data_port.json** est composé de liste de **Service** associé a un
 sudo python3 main_scan.py
 ```
 
-## 6. Exemple de sortie (JSON)
+---
+---
+## -------------- Partie 6. Exemple de sortie (JSON) -------------- 
 #### ● Name File : *logs/AUDIT_Scan_NETWORK_(dateactuel).json*
 
 ```json
@@ -86,7 +103,9 @@ sudo python3 main_scan.py
 }
 ```
 
-## 7. Conclusion 
+---
+---
+## -------------- Partie 7. Conclusion -------------- 
 À travers le développement de **NetPulse-Audit**, j'ai pu approfondir le forgeage de paquets avec Scapy, la manipulation des sockets TCP/IP et l'analyse comportementale des systèmes d'exploitation.
 
 Au-delà de l'aspect technique, cet outil illustre l'importance de la visibilité sur un réseau : on ne peut protéger que ce que l'on connaît. Il pose les bases d'une gestion proactive de la sécurité, où l'identification précise des services et de leurs versions permet d'anticiper les vecteurs d'attaque avant qu'ils ne soient exploités.
