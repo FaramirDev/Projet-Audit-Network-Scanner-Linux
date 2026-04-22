@@ -20,11 +20,11 @@ Cet outil est conçu pour un usage strictement **pédagogique** et **professionn
 ## ---------- Partie 3. Démarche d'audit *(Pédagogie & Technique)* 🛡️ ---------- 
 L'audit suit une méthodologie rigoureuse divisée en trois phases distinctes :
 
-### ● Phase 1 : Découverte d'Hôtes *(Layer 2 - ARP)*
+#### ● Phase 1 : Découverte d'Hôtes *(Layer 2 - ARP)*
 * **La démarche :** Le script émet une **requête ARP** en mode Broadcast à l'ensemble du sous-réseau.
 * **Pourquoi l'ARP ?** Contrairement au Ping (ICMP) qui est souvent bloqué par les pare-feu Windows ou Linux, l'ARP est indispensable à la communication locale. Une machine active **doit** répondre à une requête **ARP** pour exister sur le réseau, ce qui permet de contourner le filtrage furtif.
 
-### ● Phase 2 : Scan de Ports Furtif *(Layer 4 - TCP Stealth Scan)*
+#### ● Phase 2 : Scan de Ports Furtif *(Layer 4 - TCP Stealth Scan)*
 * **La démarche :** Pour chaque IP découverte, le script initie un "Half-Open Scan". Il envoie un segment **TCP** avec le drapeau **SYN** (demande de synchronisation).
 
 * **Analyse des réponses :**
@@ -32,7 +32,7 @@ L'audit suit une méthodologie rigoureuse divisée en trois phases distinctes :
 
     * **Pas de réponse :** Le port est considéré comme **🟠 Filtré** (présence probable d'un pare-feu).
 
-### ● Phase 3 : Identification & Empreinte (OS Fingerprinting & Banner Grabbing)
+#### ● Phase 3 : Identification & Empreinte (OS Fingerprinting & Banner Grabbing)
 * **Détection d'OS :** Le script analyse la valeur du champ **TTL** (Time To Live) des paquets IP reçus. Un **TTL ≤ 64** suggère un système **Linux/Unix**, tandis qu'un **TTL ≤ 128** suggère un environnement **Windows**.
 
 * **Banner Grabbing :** Pour les ports **ouverts**, une requête polie est envoyée au service (ex: requête HEAD pour le HTTP) afin de provoquer une réponse. Cela permet d'identifier le **logiciel** serveur (Nginx, Apache, SSH) et sa **version** si elle n'a pas été desactivé lors de configuration.
@@ -111,5 +111,5 @@ sudo python3 main_scan.py
 Au-delà de l'aspect technique, cet outil illustre l'importance de la visibilité sur un réseau : on ne peut protéger que ce que l'on connaît. Il pose les bases d'une gestion proactive de la sécurité, où l'identification précise des services et de leurs versions permet d'anticiper les vecteurs d'attaque avant qu'ils ne soient exploités.
 
 ---
-- **Autheur** : Alexis Rousseau - **Ingénieur | Administrateur Systeme Réseau et Cybersécurité**
+- **Auteur** : Alexis Rousseau - **Ingénieur | Administrateur Systeme Réseau et Cybersécurité**
 - **Date** 22/04/2026
