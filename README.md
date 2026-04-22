@@ -1,12 +1,12 @@
-# 🛰️ NetPulse-Audit : Scanner de Reconnaissance Réseau & Services
+# 🛰️ NetPulse-Audit : *Scanner de Reconnaissance Réseau & Services*
 
 ## 1. Présentation du Projet
 **NetPulse-Audit** est un outil d'exploration **réseau** développé en **Python**. Il a pour **objectif** de **cartographier** un segment **réseau** (LAN) et d'analyser l'**exposition** des **services** sur chaque **hôte** découvert. Contrairement aux outils de scan basiques, il utilise des techniques de bas niveau pour maximiser la visibilité tout en restant discret.
 
-## ⚠️ 2. Avertissement Légal 
+## 2. Avertissement Légal ⚠️ 
 Cet outil est conçu pour un usage strictement **pédagogique** et **professionnel** dans le cadre **d'audits de sécurité autorisés**. L'auteur décline toute responsabilité en cas d'usage malveillant. Nous rappelons qu'il **strictement interdit** de scanner un réseau sans y avoir été autorisé par le propriétaire.
 
-## 🛡️ 3. Démarche d'audit (Pédagogie & Technique) 
+## 3. Démarche d'audit (Pédagogie & Technique) 🛡️ 
 L'audit suit une méthodologie rigoureuse divisée en trois phases distinctes :
 
 ### ● Phase 1 : Découverte d'Hôtes (Layer 2 - ARP)
@@ -65,7 +65,7 @@ sudo python3 main_scan.py
 ```
 
 ## 6. Exemple de sortie (JSON)
-### ● Name File : *logs/AUDIT_Scan_NETWORK_(dateactuel).json*
+#### ● Name File : *logs/AUDIT_Scan_NETWORK_(dateactuel).json*
 
 ```json
 {
@@ -87,7 +87,7 @@ sudo python3 main_scan.py
 ```
 
 ## 7. Conclusion 
-À travers le développement de **NetPulse-Audit**, j'ai pu approfondir des concepts fondamentaux tels que le forgeage de paquets avec Scapy, la manipulation des sockets TCP/IP et l'analyse comportementale des systèmes d'exploitation.
+À travers le développement de **NetPulse-Audit**, j'ai pu approfondir le forgeage de paquets avec Scapy, la manipulation des sockets TCP/IP et l'analyse comportementale des systèmes d'exploitation.
 
 Au-delà de l'aspect technique, cet outil illustre l'importance de la visibilité sur un réseau : on ne peut protéger que ce que l'on connaît. Il pose les bases d'une gestion proactive de la sécurité, où l'identification précise des services et de leurs versions permet d'anticiper les vecteurs d'attaque avant qu'ils ne soient exploités.
 
