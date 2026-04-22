@@ -6,14 +6,14 @@
 ## 2. Avertissement Légal ⚠️ 
 Cet outil est conçu pour un usage strictement **pédagogique** et **professionnel** dans le cadre **d'audits de sécurité autorisés**. L'auteur décline toute responsabilité en cas d'usage malveillant. Nous rappelons qu'il **strictement interdit** de scanner un réseau sans y avoir été autorisé par le propriétaire.
 
-## 3. Démarche d'audit (Pédagogie & Technique) 🛡️ 
+## 3. Démarche d'audit *(Pédagogie & Technique)* 🛡️ 
 L'audit suit une méthodologie rigoureuse divisée en trois phases distinctes :
 
-### ● Phase 1 : Découverte d'Hôtes (Layer 2 - ARP)
+### ● Phase 1 : Découverte d'Hôtes *(Layer 2 - ARP)*
 * **La démarche :** Le script émet une **requête ARP** en mode Broadcast à l'ensemble du sous-réseau.
 * **Pourquoi l'ARP ?** Contrairement au Ping (ICMP) qui est souvent bloqué par les pare-feu Windows ou Linux, l'ARP est indispensable à la communication locale. Une machine active **doit** répondre à une requête **ARP** pour exister sur le réseau, ce qui permet de contourner le filtrage furtif.
 
-### ● Phase 2 : Scan de Ports Furtif (Layer 4 - TCP Stealth Scan)
+### ● Phase 2 : Scan de Ports Furtif *(Layer 4 - TCP Stealth Scan)*
 * **La démarche :** Pour chaque IP découverte, le script initie un "Half-Open Scan". Il envoie un segment **TCP** avec le drapeau **SYN** (demande de synchronisation).
 
 * **Analyse des réponses :**
