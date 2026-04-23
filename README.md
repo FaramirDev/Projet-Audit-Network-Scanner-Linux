@@ -111,5 +111,11 @@ sudo python3 main_scan.py
 Au-delà de l'aspect technique, cet outil illustre l'importance de la visibilité sur un réseau : on ne peut protéger que ce que l'on connaît. Il pose les bases d'une gestion proactive de la sécurité, où l'identification précise des services et de leurs versions permet d'anticiper les vecteurs d'attaque avant qu'ils ne soient exploités.
 
 ---
+---
+## Licence
+Ce projet est sous licence **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**.
+Toute utilisation commerciale est strictement interdite sans autorisation préalable. Consultez le fichier [LICENSE](./LICENSE) pour plus de détails.
+
+---
 - **Auteur** : Alexis Rousseau - **Ingénieur | Administrateur Systeme Réseau et Cybersécurité**
 - **Date** 22/04/2026
