@@ -2,6 +2,17 @@ from scapy.all import ARP, Ether, srp, IP, TCP, sr1
 from datetime import date, datetime
 import json, socket, os
 
+## CARTOUCHE - SCAN NETWORK
+# Autheur : Alexis Rousseau - Ingenieur | Admin Systeme Reseau et Cybersécurité
+# mail : alexisrousseau.work@proton.me
+# Date : 23/04/2026
+# Vesion : v2.1 
+# --
+# Description : SCAN Network permet de d'audit un réseau afin de découvrir l'ensemble des adresses ip associés & de Detecté de potentiel fail de configuration.
+# Genere des logs au format .json pour un historique complet de chaque audit. 
+# Script sous licence CC BY-NC 4.0
+# Avertissement Legal : Outil concu pour un usage strictement pedagogique et professionnel dans le cadre d'audit sécurité autorisés. 
+
 ## Import DATA json PORT
 path_data_file = "data/data_port.json"
 with open(path_data_file, 'r') as f:
