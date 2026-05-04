@@ -1,8 +1,18 @@
-# 🛰️ NetPulse-Audit : *Scanner de Reconnaissance Réseau & Services*
+# 🛰️ NetPulse-Audit : *Scanner de Réseau & Services*
+
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![Audit](https://img.shields.io/badge/Audit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 
 ## -------------- Partie 1. Présentation du Projet -------------- 
 **NetPulse-Audit** est un outil d'exploration **réseau** développé en **Python**. Il a pour **objectif** de **cartographier** un segment **réseau** (LAN) et d'analyser l'**exposition** des **services** sur chaque **hôte** découvert. Contrairement aux outils de scan basiques, il utilise des techniques de bas niveau pour maximiser la visibilité tout en restant discret.
 
+---
+Le script **Sentinel NetPulse-Audit** s'inscrit dans une démarche de projet personnel autour de developpement d'outils pour un projet de construction de **SIEM** développé en Python.
+
+L'outil **Sentinel NetPulse-Audit** Linux fait partie de l'un des **modules** de mon **projet Sentinel SIEM**, que vous pouvez décourir ici : 
+
+ - [📂 **Depot Github - Projet Sentinel SIEM & HIDS**](https://github.com/FaramirDev/projet-sentinel-siem-hids)
 
 
 
@@ -50,6 +60,7 @@ L'audit suit une méthodologie rigoureuse divisée en trois phases distinctes :
 ## -------------- Partie 5. Installation & Utilisation --------------  
 
 1. **Dépendances :**
+
 ```bash
 sudo pip install scapy
 ```
@@ -75,6 +86,7 @@ Le Fichier **data_port.json** est composé de liste de **Service** associé a un
 ```
 
 3. **Lancement :**
+
 ```bash
 sudo python3 main_scan.py
 ```
